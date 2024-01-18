@@ -10,6 +10,7 @@ get_builds_res () {
     echo $builds_json
 }
 
+echo "Queueing build"
 
 # Queue PR Pipeline
 res_code=$(curl -s -w "%{response_code}\n" -o post.json -X POST "https://dev.azure.com/hpc-platform-team/hpc-vm-health-check-framework/_apis/build/builds?api-version=7.2-preview.7" \
